@@ -29,7 +29,7 @@ function App() {
     if(!accessToken) {
         navigate('/login');
     }
-  },[])
+  })
 
   let navigate = useNavigate();
 
