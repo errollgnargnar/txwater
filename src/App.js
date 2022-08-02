@@ -21,7 +21,7 @@ function App() {
 
   useEffect(() => {
     let accessToken = sessionStorage.getItem("accessToken");
-
+    console.log('navigating');
     if (accessToken) {
         navigate('/home');
     }
