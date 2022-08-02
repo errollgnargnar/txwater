@@ -55,7 +55,7 @@ export default function CustomizedAccordions() {
   const [loaded, setLoaded] = useState(false);
   const [packSeven, setPackSeven] = useState(2); // 0 = solo, 1 = w/ Ro, 2 = w/ Ro and Soaps
   const [packSeries, setPackSeries] = useState(1); // 0 = solo, 1 = w/ Ro
-  const [installType, setInstallType] = useState(0); // 0 = loop, 1 = ss, 2 = os;
+  const [installType, setInstallType] = useState(2); // 0 = loop, 1 = ss, 2 = os;
   const [isFinance, setIsFinance] = useState(1); // 0 = cash, 1 = finance;
   const [isSettingPrice, setIsSettingPrice] = useState(false);
 
@@ -94,7 +94,7 @@ export default function CustomizedAccordions() {
             ))}
             {loaded && packSeven == 1 && <div>{systemData[0].addOns[0]}</div>}
             {/* price */}
-            {loaded && systemData[0].prices[packSeven][installType][isFinance]} - Equipment, Installation, and Tax
+            ${loaded && systemData[0].prices[packSeven][installType][isFinance]}.00 - Equipment, Installation, and Tax
             {/* is cash display */}
             {!isFinance && <><br/>Cash/Check/CC</>}
           </Typography>
@@ -131,7 +131,7 @@ export default function CustomizedAccordions() {
             ))}
             {loaded && packSeven == 1 && <div>{systemData[1].addOns[0]}</div>}
             {/* price */}
-            {loaded && systemData[1].prices[packSeven][installType][isFinance]} - Equipment, Installation, and Tax
+            ${loaded && systemData[1].prices[packSeven][installType][isFinance]}.00 - Equipment, Installation, and Tax
             {/* is cash display */}
             {!isFinance && <><br/>Cash/Check/CC</>}
           </Typography>
@@ -161,7 +161,7 @@ export default function CustomizedAccordions() {
                 <div key={index}>- {addOn} -</div>
             ))}
             {/* price */}
-            {loaded && systemData[2].prices[packSeries][installType][isFinance]} - Equipment, Installation, and Tax
+            ${loaded && systemData[2].prices[packSeries][installType][isFinance]}.00 - Equipment, Installation, and Tax
             {/* is cash display */}
             {!isFinance && <><br/>Cash/Check/CC</>}
           </Typography>
@@ -191,7 +191,7 @@ export default function CustomizedAccordions() {
                 <div key={index}>- {addOn} -</div>
             ))}
             {/* price */}
-            {loaded && systemData[3].prices[packSeries][installType][isFinance]} - Equipment, Installation, and Tax
+            ${loaded && systemData[3].prices[packSeries][installType][isFinance]}.00 - Equipment, Installation, and Tax
             {/* is cash display */}
             {!isFinance && <><br/>Cash/Check/CC</>}
           </Typography>
