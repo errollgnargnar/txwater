@@ -4,7 +4,8 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  useNavigate
+  useNavigate,
+  Link
 } from "react-router-dom";
 import './App.css';
 import { useState, useEffect } from 'react';
@@ -59,6 +60,7 @@ function App() {
 
   return (
       <div className="App">
+        <Link to="/login" title='Login'/>
         <ToastContainer />
         <>
           <Routes>
