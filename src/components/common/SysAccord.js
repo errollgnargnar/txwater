@@ -4,7 +4,6 @@ import MuiAccordion from '@mui/material/Accordion';
 import MuiAccordionSummary from '@mui/material/AccordionSummary';
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
 import Carousel from 'react-bootstrap/Carousel';
 import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 
@@ -94,7 +93,7 @@ export default function CustomizedAccordions({packSeven, setPackSeven, packSerie
             {/* price */}
             ${loaded && systemData[0].prices[packSeven][installType][isFinance]}.00 - Equipment, Installation, and Tax
             {/* is cash display */}
-            {loaded && isFinance && <><br/><FinWindow price={systemData[0].prices[packSeven][installType][isFinance]} /></>}
+            {loaded && isFinance ?  <><br/><FinWindow price={systemData[0].prices[packSeven][installType][isFinance]} /></> : null}
             {loaded && !isFinance && <><br/>Cash/Check/CC</>}
           </Typography>
         </AccordionSummary>
@@ -132,7 +131,7 @@ export default function CustomizedAccordions({packSeven, setPackSeven, packSerie
             {/* price */}
             ${loaded && systemData[1].prices[packSeven][installType][isFinance]}.00 - Equipment, Installation, and Tax
             {/* is cash display */}
-            {loaded && isFinance && <><br/><FinWindow price={systemData[1].prices[packSeven][installType][isFinance]} /></>}
+            {loaded && isFinance ? <><br/><FinWindow price={systemData[1].prices[packSeven][installType][isFinance]} /></> : null}
             {loaded && !isFinance && <><br/>Cash/Check/CC</>}
           </Typography>
         </AccordionSummary>
@@ -163,7 +162,7 @@ export default function CustomizedAccordions({packSeven, setPackSeven, packSerie
             {/* price */}
             ${loaded && systemData[2].prices[packSeries][installType][isFinance]}.00 - Equipment, Installation, and Tax
             {/* is cash display */}
-            {loaded && isFinance && <><br/><FinWindow price={systemData[2].prices[packSeries][installType][isFinance]} /></>}
+            {loaded && isFinance ? <><br/><FinWindow price={systemData[2].prices[packSeries][installType][isFinance]} /></> : null}
             {loaded && !isFinance && <><br/>Cash/Check/CC</>}
           </Typography>
         </AccordionSummary>
@@ -194,7 +193,7 @@ export default function CustomizedAccordions({packSeven, setPackSeven, packSerie
             {/* price */}
             ${loaded && systemData[3].prices[packSeries][installType][isFinance]}.00 - Equipment, Installation, and Tax
             {/* is cash display */}
-            {loaded && isFinance && <><br/><FinWindow price={systemData[3].prices[packSeries][installType][isFinance]} /></>}
+            {loaded && isFinance ? <><br/><FinWindow price={systemData[3].prices[packSeries][installType][isFinance]} /></> : null}
             {loaded && !isFinance && <><br/>Cash/Check/CC</>}
           </Typography>
         </AccordionSummary>

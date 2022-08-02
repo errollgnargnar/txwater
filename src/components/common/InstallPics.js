@@ -7,6 +7,9 @@ export default function InstallPics() {
         'https://s3-media0.fl.yelpcdn.com/bphoto/0MODcAoKUuhp7xadBbyiYQ/o.jpg',
         process.env.PUBLIC_URL + 'roFaucet.jpg',
         process.env.PUBLIC_URL + 'faucetColorOpts.jpg',
+        process.env.PUBLIC_URL + 'well1.jpg',
+        process.env.PUBLIC_URL + 'well2.jpg',
+        process.env.PUBLIC_URL + 'well3.jpg',
         'https://s3-media0.fl.yelpcdn.com/bphoto/8dPD5NTsQw1wvLF7hKYfJQ/o.jpg',
         'https://s3-media0.fl.yelpcdn.com/bphoto/85ARxhzQSWk_fJ6U05TMXw/o.jpg',
         'https://s3-media0.fl.yelpcdn.com/bphoto/v_pbeCC7cirCWhs5sLqfwA/o.jpg'
