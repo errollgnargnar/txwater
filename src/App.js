@@ -5,10 +5,11 @@ import {
   Routes,
   Route,
   useNavigate,
-  Link
 } from "react-router-dom";
 import './App.css';
 import { useState, useEffect } from 'react';
+
+import Button from '@mui/material/Button';
 
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -60,7 +61,7 @@ function App() {
 
   return (
       <div className="App">
-        <Link to="/login" title='Login'/>
+        <Button variant="contained" onClick={() => navigate('/login')}>Contained</Button>
         <ToastContainer />
         <>
           <Routes>
