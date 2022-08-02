@@ -32,7 +32,7 @@ function App() {
     if(!accessToken) {
         console.log('navigating to login');
 
-        navigate('/login');
+        navigate('https://txwater.herokuapp.com/login');
     }
   },[])
 
