@@ -47,6 +47,11 @@ function a11yProps(index) {
 export default function BasicTabs({location}) {
   const [value, setValue] = useState(0);
 
+  const [packSeven, setPackSeven] = useState(2); // 0 = solo, 1 = w/ Ro, 2 = w/ Ro and Soaps
+  const [packSeries, setPackSeries] = useState(1); // 0 = solo, 1 = w/ Ro
+  const [installType, setInstallType] = useState(2); // 0 = loop, 1 = ss, 2 = os;
+  const [isFinance, setIsFinance] = useState(1); // 0 = cash, 1 = finance;
+
   let navigate = useNavigate();
 
   const handleChange = (event, newValue) => {
@@ -73,7 +78,7 @@ export default function BasicTabs({location}) {
         <AboutPage location={location} />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <SysAccord />
+        <SysAccord packSeven={packSeven} setPackSeven={setPackSeven} packSeries={packSeries} setPackSeries={setPackSeries} installType={installType} setInstallType={setInstallType} isFinance={isFinance} setIsFinance={setIsFinance}/>
       </TabPanel>
       <TabPanel value={value} index={2}>
         <InstallPics />

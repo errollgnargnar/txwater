@@ -49,14 +49,11 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
-export default function CustomizedAccordions() {
+export default function CustomizedAccordions({packSeven, setPackSeven, packSeries, setPackSeries, installType, setInstallType, isFinance, setIsFinance}) {
   const [expanded, setExpanded] = useState('panel1');
   const [systemData, setSystemData] = useState([]);
   const [loaded, setLoaded] = useState(false);
-  const [packSeven, setPackSeven] = useState(2); // 0 = solo, 1 = w/ Ro, 2 = w/ Ro and Soaps
-  const [packSeries, setPackSeries] = useState(1); // 0 = solo, 1 = w/ Ro
-  const [installType, setInstallType] = useState(2); // 0 = loop, 1 = ss, 2 = os;
-  const [isFinance, setIsFinance] = useState(1); // 0 = cash, 1 = finance;
+
   const [isSettingPrice, setIsSettingPrice] = useState(false);
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -68,7 +65,7 @@ export default function CustomizedAccordions() {
       setSystemData(data.systems);
       setLoaded(true);
     })();
-  });
+  },[]);
 
   return (
     <div>
