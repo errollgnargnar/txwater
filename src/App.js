@@ -61,7 +61,6 @@ function App() {
 
   return (
       <div className="App">
-        <Button variant="contained" onClick={() => navigate('/login')}>Contained</Button>
         <ToastContainer />
         <>
           <Routes>
