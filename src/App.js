@@ -31,8 +31,9 @@ function App() {
 
     if(!accessToken) {
         console.log('navigating to login');
-
-        navigate('https://txwater.herokuapp.com/login');
+        setTimeout(() => {
+          navigate('https://txwater.herokuapp.com/login');
+        }, 1500);
     }
   },[])
 
