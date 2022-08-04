@@ -17,7 +17,7 @@ export default function InstallPics() {
 
     const picsMapped = picUrls.map(pic => {
         return (
-            <img src={pic} style={{marginTop:"2%", maxWidth:"750px"}} />
+            <img src={pic} style={{marginTop:"2%", width: "90%", maxWidth:"750px"}} />
         );
     })
 
