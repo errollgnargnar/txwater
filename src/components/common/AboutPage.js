@@ -25,7 +25,7 @@ export default function AboutPage() {
             </header>
 
             {/* logos and partners */}
-            <img src={process.env.PUBLIC_URL + 'partners.png'} style={{maxWidth:"700px"}} />
+            <img src={process.env.PUBLIC_URL + 'partners.png'} style={{width:"80%",maxWidth:"700px"}} />
             <div style={{marginBottom:"2%"}}>
                 {location == 'Austin' && <img src='https://www.austinwatersolutions.net/wp-content/uploads/2019/08/aws.png' />}
                 {location == 'Houston' && <img src='https://www.houstonwatersolutions.net/wp-content/uploads/2019/08/hws-2.png' />}

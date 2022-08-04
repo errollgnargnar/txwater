@@ -105,7 +105,7 @@ export default function PriceSetup({setIsSettingPrice, installType, setInstallTy
 
 
     return (
-        <div style={{margin: "auto", position:"absolute", top:"14%", left:"30%", backgroundColor:"white", zIndex: 1, width:"40%", height:"40%", border: "1px solid gray"}}>
+        <div style={{margin: "auto", position:"absolute", top:"14%", left:"30%", backgroundColor:"white", zIndex: 1, width:"40%", border: "1px solid gray"}}>
             <header onClick={() => setIsSettingPrice(false)} style={{border: "1px solid gray", float: "right", padding: "3%", backgroundColor:"#F78DA7"}}>
                 x
             </header><br/>
