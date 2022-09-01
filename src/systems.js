@@ -3,7 +3,7 @@ module.exports = {
         {
             "name":"Pro Elite 7 Stage Whole House Treatment System w/ Sensor Technology",
             "features": [
-                "Lifetime Warranty",
+                "Limited Lifetime Warranty",
                 "7 Stage Filtration",
                 "Patented Sensor for Regeneration (saves salt!)"
             ],
@@ -18,10 +18,10 @@ module.exports = {
             ]
         },
         {
-            "name":"700 Series 7 Stage Whole House Treatment System",
+            "name":"400 Series 4 Stage Whole House Treatment System",
             "features": [
-                "10 Year Warranty",
-                "7 Stage Filtration (same as Pro Elite)"
+                "10 Year Limited Warranty",
+                "4 Stage Filtration"
             ],
             "addOns": [
                 "4 Stage Reverse Osmosis w/ Faucet",
@@ -36,7 +36,7 @@ module.exports = {
         {
             "name":"200 Series 2 Stage Whole House Softener w/ Carbon",
             "features": [
-                "10 Year Warranty",
+                "10 Year Limited Warranty",
                 "2 Stage Filtration: Activated Carbon & Ion Exchange Media"
             ],
             "addOns": [

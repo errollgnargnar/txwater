@@ -15,9 +15,9 @@ export default function InstallPics() {
         'https://s3-media0.fl.yelpcdn.com/bphoto/v_pbeCC7cirCWhs5sLqfwA/o.jpg'
     ];
 
-    const picsMapped = picUrls.map(pic => {
+    const picsMapped = picUrls.map((pic, index) => {
         return (
-            <img src={pic} style={{marginTop:"2%", width: "90%", maxWidth:"750px"}} />
+            <img src={pic} key={index} style={{marginTop:"2%", width: "90%", maxWidth:"750px"}} />
         );
     })
 

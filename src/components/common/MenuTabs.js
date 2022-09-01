@@ -66,8 +66,8 @@ export default function BasicTabs({location}) {
 
   return (
     <Box sx={{ width: '95%', margin: "auto" }}>
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
+      <Box sx={{ borderBottom: 1, borderColor: 'divider'}}>
+        <Tabs value={value} onChange={handleChange} aria-label="basic tabs example" variant="scrollable">
           <Tab label="About" {...a11yProps(0)} />
           <Tab label="Systems" {...a11yProps(1)} />
           <Tab label="Pictures" {...a11yProps(2)} />

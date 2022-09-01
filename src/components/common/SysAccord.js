@@ -141,7 +141,7 @@ export default function CustomizedAccordions({packSeven, setPackSeven, packSerie
               <Carousel.Item>
               <img
                   className="d-block w-100"
-                  src={process.env.PUBLIC_URL + 's700pg1.png'}
+                  src={process.env.PUBLIC_URL + 's400pg1.png'}
               />
               </Carousel.Item>
             </Carousel>

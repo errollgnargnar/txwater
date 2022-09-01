@@ -46,6 +46,7 @@ function App() {
         navigate('/home');
         sessionStorage.setItem('accessToken', userCredential.accessToken);
         sessionStorage.setItem('accessEmail', user.email);
+        sessionStorage.setItem('uid', user.uid);
         // ...
       })
       .catch((error) => {
