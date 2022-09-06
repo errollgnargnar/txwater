@@ -10,6 +10,7 @@ import SysAccord from "./SysAccord";
 
 import InstallPics from './InstallPics';
 import AboutPage from './AboutPage';
+import WellPage from './WellPage';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -44,13 +45,20 @@ function a11yProps(index) {
   };
 }
 
-export default function BasicTabs({location}) {
+export default function BasicTabs({location, isLoaded, setIsLoaded}) {
   const [value, setValue] = useState(0);
 
   const [packSeven, setPackSeven] = useState(2); // 0 = solo, 1 = w/ Ro, 2 = w/ Ro and Soaps
   const [packSeries, setPackSeries] = useState(1); // 0 = solo, 1 = w/ Ro
   const [installType, setInstallType] = useState(2); // 0 = loop, 1 = ss, 2 = os;
   const [isFinance, setIsFinance] = useState(1); // 0 = cash, 1 = finance;
+
+  // state for well page on sysaccord
+  const [supplyType, setSupplyType] = useState("Utility");
+
+  // well equip states
+  const [wellEquip, setWellEquip] = useState([]);
+  const [totalCost, setTotalCost] = useState(0);
 
   let navigate = useNavigate();
 
@@ -78,7 +86,11 @@ export default function BasicTabs({location}) {
         <AboutPage location={location} />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <SysAccord packSeven={packSeven} setPackSeven={setPackSeven} packSeries={packSeries} setPackSeries={setPackSeries} installType={installType} setInstallType={setInstallType} isFinance={isFinance} setIsFinance={setIsFinance}/>
+
+        { supplyType === "Utility" ? (
+          <SysAccord packSeven={packSeven} setPackSeven={setPackSeven} packSeries={packSeries} setPackSeries={setPackSeries} installType={installType} setInstallType={setInstallType} isFinance={isFinance} setIsFinance={setIsFinance} supplyType={supplyType} setSupplyType={setSupplyType}/>
+        ) : <WellPage supplyType={supplyType} setSupplyType={setSupplyType} wellEquip={wellEquip} setWellEquip={setWellEquip} isLoaded={isLoaded} setIsLoaded={setIsLoaded} totalCost={totalCost} setTotalCost={setTotalCost} /> }
+        
       </TabPanel>
       <TabPanel value={value} index={2}>
         <InstallPics />

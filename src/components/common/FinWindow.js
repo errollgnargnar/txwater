@@ -20,7 +20,7 @@ export default function FinWindow({price}) {
     <div>
         <Button variant="text" onClick={handleClick}>$0 Down Financing</Button>
         <Popper id={id} open={open} anchorEl={anchorEl}>
-            <Box sx={{ border: 1, p: 1, bgcolor: 'background.paper' }}>
+            <Box sx={{ border: 1, p: 1, bgcolor: 'background.paper'}}>
             <strong>1 Yr Same As Cash </strong>
             <div>
                 <ul>

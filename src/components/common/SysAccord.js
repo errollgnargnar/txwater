@@ -9,6 +9,7 @@ import SettingsSuggestIcon from '@mui/icons-material/SettingsSuggest';
 
 import PriceSetup from './PriceSetup';
 import FinWindow from './FinWindow';
+import SupplyTypeSel from './SupplyTypeSel';
 
 import { useEffect, useState } from "react";
 import * as data from '../../systems';
@@ -49,7 +50,7 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
   borderTop: '1px solid rgba(0, 0, 0, .125)',
 }));
 
-export default function CustomizedAccordions({packSeven, setPackSeven, packSeries, setPackSeries, installType, setInstallType, isFinance, setIsFinance}) {
+export default function CustomizedAccordions({packSeven, setPackSeven, packSeries, setPackSeries, installType, setInstallType, isFinance, setIsFinance, supplyType, setSupplyType}) {
   const [expanded, setExpanded] = useState('panel1');
   const [systemData, setSystemData] = useState([]);
   const [loaded, setLoaded] = useState(false);
@@ -70,6 +71,9 @@ export default function CustomizedAccordions({packSeven, setPackSeven, packSerie
   return (
     <div>
       <div style={{display: "flex", justifyContent:"space-around", alignItems: "center"}}>
+        <div>
+          <SupplyTypeSel supplyType={supplyType} setSupplyType={setSupplyType} />
+        </div>
         <p>{' '}</p>
         <div>
           <SettingsSuggestIcon onClick={() => setIsSettingPrice(true)}/>

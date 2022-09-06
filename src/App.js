@@ -19,6 +19,8 @@ function App() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
+  const [isLoaded, setIsLoaded] = useState(false);
+
   useEffect(() => {
     let accessToken = sessionStorage.getItem("accessToken");
     if (accessToken) {
@@ -66,7 +68,7 @@ function App() {
           <Routes>
             <Route path='/login' element={<Form setEmail={setEmail}
                   setPassword={setPassword} handleAction={handleAction} />} />
-            <Route path='/home' element={<Home  />} />
+            <Route path='/home' element={<Home isLoaded={isLoaded} setIsLoaded={setIsLoaded} />} />
           </Routes>
         </>
       </div>
